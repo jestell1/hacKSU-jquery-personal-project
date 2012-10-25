@@ -11,36 +11,13 @@
 </head>
 
 <body>
-
-	<div data-role="page" id="favoriteChoice">
-
-		<div data-role="header">
-			<h1>Snack Voter</h1>
-		</div>
-		
-		<div data-role="content">
-			<h1>Choose Your Favorite Snack!</h1>
-			<div data-role="content">
-				<div data-role="fieldcontain">
-					<fieldset data-role="controlgroup" data-type="vertical">
-						<legend>
-						Choose
-						</legend>
-						<input id="radio1" name="option1" value="1" type="radio">
-						<label for="radio1">
-							Sandwich
-						</label>
-					</fieldset>
-				</div>
-			</div>
-		</div>
-	
 	<!--Check to see if they already voted -->
 	<div data-role="page" id="mainPage">
 		<!-- Start Page -->
 		
 	</div>
 	
+	<!--Begin Snack Voting -->
 	<div data-role="page" id="favoriteChoice">
 
 		<div data-role="header">
@@ -52,8 +29,8 @@
 			<div data-role="content">
 				<div data-role="fieldcontain">
 					<fieldset data-role="controlgroup" data-type="vertical">
-					<input id="Sandwich" name="option1" value="1" type="radio">
-					<label for="sandwich">
+					<input id="radio1" name="sandwich" value="1" type="radio">
+					<label for="radio1">
 						Sandwich
 					</label>
 				</fieldset>
@@ -61,14 +38,15 @@
 			</div>
 		</div>
 		
-		<!--Button For Lack of Favorite Snack-->
+		<!--Button To Add Favorite Snack-->
 	</div>
 	
+	<!--Beign Recommend Snack Page -->
 	<div data-role="page" id="recommendSnack">
 		
 		<h1>What is your Favorite Snack</h1>
 		<div data-role="content">
-        <!-- <form action="some.php" method="post"> -->
+        <!-- Get Their Favorite Snack And Add it To List -->
 			<form>
 				<label for="basic">Favorite Snack:</label>
 				<input type="text" id="favoriteSnack" data-mini="true" />
@@ -80,11 +58,24 @@
 		</div>
 	</div>
 	
-	<div data-role="page" id="voteTally">
-		<h1>Here's What Everyone Likes!</h1>
-		<div
+	<!-- Being Vote Display Page -->
+	<div data-role="page" id="voteDisplay">
+	<h1>Here's What Everyone Likes!</h1>
+	<!-- Display List of Snacks and Votes -->
+		<div data-role="content">
+			<ul data-role="listview" data-divider-theme="a" data-inset="true">
+			Snacks
+				<li data-theme="c">
+					<a href="#" data-transition="slide">
+						Sandwich
+						<span class="ui-li-count">
+							23
+						</span>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 	
 </body>
-</head>
 </html>
